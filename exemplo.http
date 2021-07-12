@@ -10,10 +10,14 @@ content-type: application/json
 }
 
 ###
-
-PUT http://localhost:3000/cursos HTTP/1.1
+#Vai pegar o id 2 e editar
+PUT http://localhost:3000/cursos/2 HTTP/1.1 
 content-type: application/json
 
 {
     
 }
+
+###
+#VAI DELETATO O 2 
+DELETE http://localhost:3000/cursos/2
