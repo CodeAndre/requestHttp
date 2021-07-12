@@ -6,8 +6,8 @@ import {HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class CursosService {
-  
-  private readonly API = '  http://localhost:3000/cursos'
+
+  private readonly API = 'http://localhost:3000/cursos'
 
   constructor(private http: HttpClient) { }
 
