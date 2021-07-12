@@ -4,11 +4,11 @@
             <h4>Cursos</h4>
         </div>
         <div class="float-end">
-            <button type="button" class="btn btn-primary" [routerLink]="['cursos']">Novo Curso</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo Curso</button>
         </div>
     </div>
     <div class="card-body">
-        <table class="table table-hover">
+        <table class="table table-hover" *ngIf="cursos$ | async as cursos; else loading">
             <thead>
                 <tr>
                     <th>#</th>
@@ -33,6 +33,9 @@
                 </tr>
             </tbody>
         </table>
+        <ng-template #loading>
+            <span>Carregando Cursos...</span>
+        </ng-template>
     </div>
 </div>
 

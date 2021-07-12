@@ -15,13 +15,13 @@ export class CursosListaComponent implements OnInit {
   //cursos: Curso[];
 
   cursos$: Observable<Curso[]>; //simplificando o codigo
-  
+
   constructor(private services: CursosService) { }
 
   ngOnInit(): void {
-    //this.services.listar().subscribe(dados => this.cursos = dados); 
+     //this.services.listar().subscribe(dados => this.cursos = dados);
 
-    this.cursos$ = this.services.listar();
+     this.cursos$ = this.services.listar();
   }
 
 }
